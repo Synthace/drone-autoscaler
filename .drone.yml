@@ -49,7 +49,7 @@ steps:
   image: plugins/gcr
   settings:
     cache_from: eu.gcr.io/antha-images/drone-autoscaler:latest
-    context: drone-autoscaler
+    context: ./
     dockerfile: ./Dockerfile
     json_key:
       from_secret: google_credentials

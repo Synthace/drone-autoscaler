@@ -57,6 +57,7 @@ steps:
     repo: eu.gcr.io/antha-images/drone-autoscaler
     tags:
     - latest
+    - spot
 
 
 volumes:

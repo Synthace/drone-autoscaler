@@ -214,7 +214,7 @@ func (p *planner) mark(ctx context.Context, n int) error {
 
 	return nil
 }
-cd
+
 // helper function returns the number of pending and
 // running builds in the remote Drone installation.
 func (p *planner) count(ctx context.Context) (pending, running int, err error) {

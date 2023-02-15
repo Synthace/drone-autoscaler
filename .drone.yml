@@ -1,10 +1,7 @@
 ---
 kind: pipeline
-name: default
-type: vm
-
-pool:
-  use: ubuntu
+name: drone-autoscaler
+type: docker
 
 platform:
   os: linux
@@ -47,29 +44,21 @@ steps:
     DATABASE_CONFIG: "root:password@tcp(mysql:3306)/test?parseTime=true"
     DATABASE_DRIVER: mysql
 
-- name: build
-  pull: default
-  image: golang
-  volumes:
-  - name: deps
-    path: /go
-  commands:
-  - sh .drone.sh
 
-- name: publish
-  pull: default
-  image: plugins/docker
+- name: build
+  image: plugins/gcr
   settings:
-    auto_tag: true
-    repo: drone/autoscaler
-    password:
-      from_secret: docker_password
-    username:
-      from_secret: docker_username
-  when:
-    event:
-    - push
-    - tag
+    cache_from: eu.gcr.io/antha-images/drone-autoscaler:latest
+    context: ./
+    dockerfile: ./Dockerfile
+    json_key:
+      from_secret: google_credentials
+    registry: eu.gcr.io
+    repo: eu.gcr.io/antha-images/drone-autoscaler
+    tags:
+    - latest
+    - spot
+
 
 volumes:
 - name: deps
@@ -90,4 +79,13 @@ services:
     MYSQL_DATABASE: test
     MYSQL_ROOT_PASSWORD: password
 
+
+trigger:
+  event:
+    - push # only deploy when building branches, not tags
+  branch:
+    - master
+    - gcp-spot-vms
+
 ...
+

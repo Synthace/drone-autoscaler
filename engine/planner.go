@@ -220,7 +220,7 @@ func (p *planner) mark(ctx context.Context, n int) error {
 func (p *planner) count(ctx context.Context) (pending, running int, err error) {
 	logger := logger.FromContext(ctx)
 	stages, err := p.client.Queue()
-    log.
+    logger.
 		WithField("stages", stages).
 		Debugln("DEBUG QUEUE API CONTENT")
 	if err != nil {

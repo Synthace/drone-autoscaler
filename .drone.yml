@@ -46,19 +46,38 @@ steps:
 
 
 - name: build
+  pull: default
+  image: golang
+  volumes:
+  - name: deps
+    path: /go
+  commands:
+  - sh .drone.sh
+
+#- name: build
+#  image: plugins/gcr
+#  settings:
+#    cache_from: eu.gcr.io/antha-images/drone-autoscaler:latest
+#    context: ./
+#    dockerfile: ./Dockerfile
+#    json_key:
+#      from_secret: google_credentials
+#    registry: eu.gcr.io
+#    repo: eu.gcr.io/antha-images/drone-autoscaler
+#    tags:
+#    - latest
+#    - spot
+
+- name: publish
   image: plugins/gcr
   settings:
-    cache_from: eu.gcr.io/antha-images/drone-autoscaler:latest
-    context: ./
-    dockerfile: ./Dockerfile
+    repo: eu.gcr.io/antha-images/drone-autoscaler
+    registry: eu.gcr.io
     json_key:
       from_secret: google_credentials
-    registry: eu.gcr.io
-    repo: eu.gcr.io/antha-images/drone-autoscaler
     tags:
-    - latest
-    - spot
-
+      - latest
+      - spot
 
 volumes:
 - name: deps
@@ -83,9 +102,6 @@ services:
 trigger:
   event:
     - push # only deploy when building branches, not tags
-  branch:
-    - master
-    - gcp-spot-vms
 
 ...
 

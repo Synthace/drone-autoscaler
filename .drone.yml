@@ -78,6 +78,13 @@ steps:
     tags:
       - latest
       - spot
+    when:
+      event:
+        - push # only deploy when building branches, not tags
+      branch:
+        - master
+        - gcp-spot-vms
+
 
 volumes:
 - name: deps

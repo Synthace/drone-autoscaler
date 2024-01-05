@@ -1,7 +1,8 @@
 repo_name: Synthace/drone-autoscaler
 report_id: d9f03eed72e82247c73a6f788fb967e8
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-10T14:24:45+00:00'
+timestamp: '2024-01-05T08:53:46+00:00'
 requested_by: bsda
 provider: github
 branch: master
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler
   detection_source: Repo Metadata
 - name: Golang
   description: An open source programming language that makes it easy to build simple,
@@ -26,6 +28,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler
   detection_source: Repo Metadata
 - name: SQL
   description: It is a domain-specific language used in programming
@@ -35,7 +38,8 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
-  detection_source: store/migrate/sqlite/files/001_create_table_servers.sql
+  detection_source_url: https://github.com/Synthace/drone-autoscaler/blob/master/store/migrate/mysql/files/001_create_table_servers.sql
+  detection_source: store/migrate/mysql/files/001_create_table_servers.sql
   last_updated_by: Brad Rydzewski
   last_updated_on: 2018-03-02 22:57:35.000000000 Z
 - name: Protobuf
@@ -46,6 +50,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Serialization Frameworks
   image_url: https://img.stackshare.io/service/4393/ma2jqJKH_400x400.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler/blob/master/go.mod
   detection_source: go.mod
   last_updated_by: Julien Duchesne
   last_updated_on: 2023-01-25 16:41:25.000000000 Z
@@ -58,6 +63,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Remote Procedure Call (RPC)
   image_url: https://img.stackshare.io/service/4670/default_d811b0ac72205af84aca21f967594338580be913.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler/blob/master/go.mod
   detection_source: go.mod
   last_updated_by: Joe Groocock
   last_updated_on: 2019-08-24 23:12:20.000000000 Z
@@ -69,6 +75,7 @@ tools:
   category: Data Stores
   sub_category: Databases
   image_url: https://img.stackshare.io/service/1025/logo-mysql-170x170.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler/blob/master/go.mod
   detection_source: go.mod
   last_updated_by: Joe Groocock
   last_updated_on: 2019-08-24 23:12:20.000000000 Z
@@ -81,6 +88,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Virtual Machine Platforms & Containers
   image_url: https://img.stackshare.io/service/586/n4u37v9t_400x400.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler
   detection_source: Repo Metadata
 - name: Drone.io
   description: Open source continuous integration platform built on Docker
@@ -90,6 +98,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/668/R_wMcCqN_400x400.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler/blob/master/.drone.yml
   detection_source: ".drone.yml"
   last_updated_by: Bruno Almeida
   last_updated_on: 2022-08-17 13:23:13.000000000 Z
@@ -101,6 +110,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler
   detection_source: Repo Metadata
 - name: OpenCensus
   description: A single distribution of libraries that automatically collect traces
@@ -111,6 +121,7 @@ tools:
   category: Monitoring
   sub_category: Performance Monitoring
   image_url: https://img.stackshare.io/service/10794/EpBd2Xrw_400x400.jpg
+  detection_source_url: https://github.com/Synthace/drone-autoscaler/blob/master/go.mod
   detection_source: go.mod
   last_updated_by: Bruno Almeida
   last_updated_on: 2022-08-17 13:23:13.000000000 Z
@@ -124,6 +135,7 @@ tools:
   category: Monitoring
   sub_category: Monitoring Tools
   image_url: https://img.stackshare.io/service/2501/default_3cf1b307194b26782be5cb209d30360580ae5b3c.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler/blob/master/go.mod
   detection_source: go.mod
   last_updated_by: Julien Duchesne
   last_updated_on: 2023-01-25 16:41:25.000000000 Z
@@ -136,6 +148,7 @@ tools:
   category: Application Hosting
   sub_category: Cloud Hosting
   image_url: https://img.stackshare.io/service/295/Onjxs6Lw_400x400.jpg
+  detection_source_url: https://github.com/Synthace/drone-autoscaler/blob/master/go.mod
   detection_source: go.mod
   last_updated_by: Joe Groocock
   last_updated_on: 2019-08-24 23:12:20.000000000 Z
@@ -148,6 +161,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler
   detection_source: Repo Metadata
 - name: go-sqlite3
   description: Sqlite3 driver for go using database/sql
@@ -158,6 +172,7 @@ tools:
   category: Libraries
   sub_category: Go Modules Packages
   image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/Synthace/drone-autoscaler/blob/master/go.mod
   detection_source: go.mod
   last_updated_by: Joe Groocock
   last_updated_on: 2019-08-24 23:12:20.000000000 Z
